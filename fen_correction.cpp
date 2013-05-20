@@ -1,4 +1,4 @@
-/*Copyright (C) <2012> <Plestan> <Kévin>
+/*Copyright (C) <2013> <Plestan> <Kévin>
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -92,10 +92,7 @@ void Fen_correction::setWindowLayout(int multiple)
         total = new QLabel(tr("Tu as eu <strong><span style=\"color: rgb(0, 200, 0);\">")+QString::number(note)+tr("/10</span></strong>"));
         pngTotal = new QLabel();
         if(note == 10)
-        {
             pngTotal->setPixmap(QPixmap("excellent.png"));
-            //playApplause();
-        }
         else
             pngTotal->setPixmap(QPixmap("bien.png"));
     }
@@ -201,10 +198,7 @@ void Fen_correction::setWindowLayout(int tabOrder[])
         total = new QLabel(tr("Tu as eu <strong><span style=\"color: rgb(0, 200, 0);\">")+QString::number(note)+tr("/10</span></strong>"));
         pngTotal = new QLabel();
         if(note == 10)
-        {
             pngTotal->setPixmap(QPixmap("excellent.png"));
-            //playApplause();
-        }
         else
             pngTotal->setPixmap(QPixmap("bien.png"));
     }
@@ -314,14 +308,6 @@ void Fen_correction::openMessageBox(RecordState state, const int lastRecordTime)
     else if(state == NORECORD)
         QMessageBox::information(this, tr("Temps de réponses"), tr("Tu as mis ")+QString::number(timeTab[1])+tr(" minute(s) et ")+QString::number(timeTab[0])+tr(" secondes."));
 }
-/*void Fen_correction::playApplause()   // not implemented yet : need an update system update
-{
-    mediaObject = new Phonon::MediaObject(this);
-    mediaObject->setCurrentSource(Phonon::MediaSource("applause.mp3"));
-    audioOutput = new Phonon::AudioOutput(Phonon::MusicCategory, this);
-    Phonon::Path path = Phonon::createPath(mediaObject, audioOutput);
-    mediaObject->play();
-}*/
 
 Fen_correction::~Fen_correction()
 {
@@ -333,36 +319,30 @@ Fen_correction::~Fen_correction()
     delete pngTotal;
     delete correct;
 
-    /*delete mediaObject;
-    delete audioOutput;
-
-    mediaObject = 0;
-    audioOutput = 0;*/
-
-    total = nullptr;
-    layout = nullptr;
-    vlayout = nullptr;
-    quit = nullptr;
-    texte = nullptr;
-    pngTotal = nullptr;
-    correct = nullptr;
+    total = 0;
+    layout = 0;
+    vlayout = 0;
+    quit = 0;
+    texte = 0;
+    pngTotal = 0;
+    correct = 0;
 
     for (int i = 0; i < 10; i++)
     {
         delete multiplication[i];
-        multiplication[i] = nullptr;
+        multiplication[i] = 0;
     }
     for (int i = 0; i < 3; i++)
     {
         delete hlayout[i];
-        hlayout[i] = nullptr;
+        hlayout[i] = 0;
     }
     for (int i = 0; i < 2; i++)
     {
         for ( int j = 0; j < 10; j++)
         {
             delete correction[i][j];
-            correction[i][j] = nullptr;
+            correction[i][j] = 0;
         }
     }
 }

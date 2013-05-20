@@ -1,4 +1,4 @@
-/*Copyright (C) <2012> <Plestan> <Kévin>
+/*Copyright (C) <2013> <Plestan> <Kévin>
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -19,14 +19,12 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 
 #include <QSettings>
 
-typedef enum RecordState RecordState;
-
 enum RecordState
 {
     RECORD, UNVALIDRECORD, NORECORD
 };
 
-
+typedef enum RecordState RecordState;
 
 class TimeRecordMgr : public QSettings
 {

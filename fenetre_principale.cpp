@@ -1,4 +1,4 @@
-/*Copyright (C) <2012> <Plestan> <Kévin>
+/*Copyright (C) <2013> <Plestan> <Kévin>
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -306,7 +306,11 @@ void Fenetre_principale::resetLabel(QAction *action)    //change the Buttons' te
     }
 }
 
-void Fenetre_principale::erreurSocket() { QMessageBox::information(this, tr("Erreur de connexion"), tr("Impossible de vérifier les mise à jour")); }    //if there is a connection error, it opern a QMessageBox for inform the user
+void Fenetre_principale::erreurSocket()
+{
+    if(userAction)
+        QMessageBox::information(this, tr("Erreur de connexion"), tr("Impossible de vérifier les mise à jour"));   //if there is a connection error, it opern a QMessageBox for inform the user
+}
 
 void Fenetre_principale::verification() //slot that is call when user click on check update action.
 {
@@ -335,23 +339,23 @@ Fenetre_principale::~Fenetre_principale()
         fenList[i] = 0;
     }
 
-    file = nullptr;
-    tools = nullptr;
-    modes = nullptr;
-    quitAction = nullptr;
-    updateAction = nullptr;
-    shuffleAction = nullptr;
-    chrono = nullptr;
-    easyMode = nullptr;
-    mediumMode = nullptr;
-    hardMode = nullptr;
-    actionGroup = nullptr;
-    quit = nullptr;
-    customTable = nullptr;
-    layout = nullptr;
-    glayout = nullptr;
-    vlayout = nullptr;
-    check = nullptr;
-    widget = nullptr;
-    mapper = nullptr;
+    file = 0;
+    tools = 0;
+    modes = 0;
+    quitAction = 0;
+    updateAction = 0;
+    shuffleAction = 0;
+    chrono = 0;
+    easyMode = 0;
+    mediumMode = 0;
+    hardMode = 0;
+    actionGroup = 0;
+    quit = 0;
+    customTable = 0;
+    layout = 0;
+    glayout = 0;
+    vlayout = 0;
+    check = 0;
+    widget = 0;
+    mapper = 0;
 }

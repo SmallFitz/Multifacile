@@ -1,4 +1,4 @@
-/*Copyright (C) <2012> <Plestan> <Kévin>
+/*Copyright (C) <2013> <Plestan> <Kévin>
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -29,7 +29,6 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 #include <QSettings>
 #include <QApplication>
 #include <QtDebug>
-#include <phonon>
 
 #include "spinBox.h"
 #include "modeEnum.h"
@@ -46,7 +45,6 @@ private :
     void setWindowLayout(int multiple);
     void setWindowLayout(int tabOrder[]);
 
-    //void playApplause();
 
     int reponse[10], resultat[10], timeTab[4];
     int *tab;
@@ -54,9 +52,6 @@ private :
     int note;
     int timeElapsed;
     int timeSeconde;
-
-    //Phonon::MediaObject *mediaObject;
-    //Phonon::AudioOutput *audioOutput;
 
     Correction *correct;
 

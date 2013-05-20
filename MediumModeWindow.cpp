@@ -1,4 +1,4 @@
-/*Copyright (C) <2012> <Plestan> <Kévin>
+/*Copyright (C) <2013> <Plestan> <Kévin>
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -161,16 +161,16 @@ MediumModeWindow::~MediumModeWindow()
     delete layout;
     delete vlayout;
 
-    corriger = nullptr;
-    layout = nullptr;
-    vlayout = nullptr;
+    corriger = 0;
+    layout = 0;
+    vlayout = 0;
 
     for(int i = 0; i < 10; i++)
     {
         delete reponses[i];
-        reponses[i] = nullptr;
+        reponses[i] = 0;
     }
 
     if(time)
-        chronometre = nullptr;
+        chronometre = 0;
 }

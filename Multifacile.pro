@@ -28,7 +28,7 @@ HEADERS += \
 
 RC_FILE = Icon.rc
 
-QT += network phonon
+QT += network
 
 RESOURCES += \
     ressource.qrc \
